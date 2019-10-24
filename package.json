@@ -1,0 +1,8 @@
+{
+  "name": "JavaScript-ES6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dnsdigitaltech/JavaScript-ES6.git",
+  "author": "Davi Bernardo <dnssites@gmail.com>",
+  "license": "MIT"
+}
