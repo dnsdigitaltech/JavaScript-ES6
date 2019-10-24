@@ -1,8 +1,16 @@
 {
-  "name": "JavaScript-ES6",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/dnsdigitaltech/JavaScript-ES6.git",
-  "author": "Davi Bernardo <dnssites@gmail.com>",
-  "license": "MIT"
+    "name": "JavaScript-ES6",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/dnsdigitaltech/JavaScript-ES6.git",
+    "author": "Davi Bernardo <dnssites@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3"
+    },
+    "scripts": {
+        "dev": "babel ./main.js -o ./bundle.js -w"
+    }
 }
