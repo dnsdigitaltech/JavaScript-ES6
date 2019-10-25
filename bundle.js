@@ -1,10 +1,12 @@
 "use strict";
 
-/////////////////Templates Literals/////////////
-//É uma forma de incluir variáveis dentro de strings no java script a partir do ES6
+/////////////////Object Short Syntax/////////////
 var nome = 'Davi';
-var idade = 35; //essa sintaxe é muito feia
+var idade = 35; //Quando precisamos passar informações para um determinado objeto
 
-console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos'); //por isto vamos usarm o templantes literals
-
-console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos."));
+var usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: 'DNS DIGITAL TECH'
+};
+console.log(usuario);
