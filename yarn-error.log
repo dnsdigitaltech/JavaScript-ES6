@@ -1,5 +1,5 @@
 Arguments: 
-  /home/dbernardo/.nvm/versions/node/v12.11.1/bin/node /usr/share/yarn/bin/yarn.js add @bable/babel-preset-preset-env
+  /home/dbernardo/.nvm/versions/node/v12.11.1/bin/node /usr/share/yarn/bin/yarn.js add @babel/plugin-object-rest-spread
 
 PATH: 
   /home/dbernardo/.nvm/versions/node/v12.11.1/bin:/home/dbernardo/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/flutter/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@bable%2fbabel-preset-preset-env: Not found
+  Error: https://registry.yarnpkg.com/@babel%2fplugin-object-rest-spread: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66926:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140564:22)
       at Request.emit (events.js:210:5)
@@ -40,7 +40,7 @@ npm manifest:
           "@babel/preset-env": "^7.6.3"
       },
       "scripts": {
-          "dev": "babel ./main.js -o ./bundle.js"
+          "dev": "babel ./main.js -o ./bundle.js -w"
       }
   }
 
