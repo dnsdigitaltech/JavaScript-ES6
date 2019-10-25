@@ -1,77 +1,29 @@
-/////////////////CONST & LET///////////
-//para definir uma variável gerelmante é com var
-//porém existe duas novas palavras chaves pra gente usar
-//const = constante
-//o que difere a const com uma var comum é que ela naão pode ter seu valor reatribuido
+/////////////////Operação em Array///////////
+const arr = [1, 3, 4, 5, 8, 9];
 
-/*const a = 1;
+//map-> função que serve pra percorrer o vetor e retornar o alguma informação
+const newArr = arr.map(function(item) {
+    return item * 2; //multiplica todos os item do vetor por 2
+});
 
-a = 3; //o a e readOnly, ou seja só poderá ler e não poderá reatribu-la pois é uma const
-*/
+console.log(newArr);
 
-/*
-//Na const você pode mutar uma variavel
-const usuario = { nome: 'Davi' };
-usuario.nome = 'Bernardo'; //neste caso ele deixará, sito é mutação
-console.log(usuario);*/
+//reduce-> função que pode consumir todo nosso vetor e tranformar em uma unica informação
+const sum = arr.reduce(function(total, next) {
+    return total + next;
+});
 
-//variável de escopo
-/*function teste(x) {
-    let y = 2; //o let é a palavra chave para as variáveis de escopo
-    if (x > 5) {
-        let y = 4; //porŕm se quisermos atribuir detro do escopo conteduo da var Y podemos
-        console.log(x, y);
-    }
-}
+console.log(sum);
 
-//OBS ele encontrou o X e também o Y, pois dentro de cada {} ele encontrou o conteúdo as {} são escopos
-//console.log(y); //dar erro pois o y não está definido, pois o escopo do console.log não é o mesmo da var y
+//filter-> função que pegar uma informação através de filtro
+const filter = arr.filter(function(item) {
+    return item % 2 === 0;
+});
 
-teste(10);
+console.log(filter);
 
-/*
-////////////////CLASSES///////////////
-class List {
-    constructor() {
-        this.data = [];
-    }
-    add(data) {
-        this.data.push(data)
-        console.log(this.data);
-    }
-}
-
-//extende a class List
-class TodoList extends List {
-    constructor() {
-        //para chamar a o metodo costrutor da classe pai é bom colocar a propriedade chamada super, é exatamente chamar o método construtor da class pai
-        super();
-        //depois podemos criar as demais propriedades
-        this.usuario = 'Davi';
-    }
-    mostraUsuario() {
-        console.log(this.usuario);
-    }
-}
-//coloquei na classs List
-/*class TodoList {
-    constructor() {
-        this.todos = [
-
-        ]
-    }
-
-    addTodo() {
-        this.todos.push('Novo todo');
-        console.log(this.todos);
-    }
-}*/
-/*
-var MinhaLista = new TodoList();
-
-document.getElementById('novotodo').onclick = function() {
-    MinhaLista.add('Novo todo');
-    //MinhaLista.addTodo();
-}
-
-MinhaLista.mostraUsuario();*/
+//find-> função que verifica se existe uma informação e a encontra no array
+const find = arr.find(function(item) {
+    return item === 78;
+});
+console.log(find);
