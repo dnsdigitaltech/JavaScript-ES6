@@ -1,23 +1,38 @@
 "use strict";
 
-/////////////////Valores padrão pro parâmetros das funções///////////
-//function soma(a, b) {
-function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  //é necessário atribuir dados
-  return a + b;
-} //se executar isto vai retorna NaN nos dois, pois não conseguiu identificar qual nº é para somar
-
-
-console.log(soma(1));
-console.log(soma()); //igualmente para arrow function
-
-var soma2 = function soma2() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
-  return a + b;
+/////////////////Desestruturação/////////////
+var usuario = {
+  nome: "Davi",
+  idade: 35,
+  endereco: {
+    cidade: "Rio de Janeiro",
+    estado: "RJ"
+  }
 };
+console.log(usuario); //pegar nome e idade, neste caso tem que pegar um a um
 
-console.log(soma2(1));
-console.log(soma2());
+/*const nome = usuario.nome;
+const idade = usuario.idade;
+const cidade = usuario.edereco.cidade;*/
+//conceito de desestruturação aplicad  no ES6+ nesta caso é conceito de objeto
+
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade); //usar conceito de desestruturação na function
+
+function mostraNome(usuario) {
+  console.log(usuario.nome);
+}
+
+mostraNome(usuario); //outra forma é passar direto o objeto/desestruturação de parametros de funções
+
+function mostraNome2(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+mostraNome2(usuario);
