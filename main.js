@@ -1,12 +1,5 @@
-/////////////////Object Short Syntax/////////////
-const nome = 'Davi';
-const idade = 35;
+/////////////////Webpack Server/////////////
+//é o arquivo principal que carregará todos demais arquivos da nossa API
+import { soma } from './funcoes';
 
-//Quando precisamos passar informações para um determinado objeto
-const usuario = {
-    nome: nome,
-    idade: idade,
-    empresa: 'DNS DIGITAL TECH'
-}
-
-console.log(usuario);
+console.log(soma(1, 2));
