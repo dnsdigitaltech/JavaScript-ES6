@@ -90,11 +90,11 @@
 /*!********************!*\
   !*** ./funcoes.js ***!
   \********************/
-/*! exports provided: soma */
+/*! exports provided: soma, sub, mult */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"mult\", function() { return mult; });\n//exportar a função soma para outro arquivo\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\nfunction mult(a, b) {\n  return a * b;\n} //export default e o export que é por padrão quando importa um arquivo ex o arqvui soma.js\n\n//# sourceURL=webpack:///./funcoes.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n/////////////////Webpack Server/////////////\n//é o arquivo principal que carregará todos demais arquivos da nossa API\n\nconsole.log(Object(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 2));\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n/////////////////Webpack Server/////////////\n//é o arquivo principal que carregará todos demais arquivos da nossa API\n//importar a função soma para o arquivo necessário\n//import { soma, sub } from './funcoes';\n//import { soma as somaFunction, sub } from './funcoes';\n //import default\n//import soma from './soma';\n//console.log(somaFunction(1, 2));\n//console.log(sub(6, 5));\n\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__);\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](1, 2));\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"sub\"](6, 5));\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 
