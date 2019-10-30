@@ -1,35 +1,16 @@
-const minhaPromise = () => new Promise((resolve, reject) => {
-    setTimeout(() => { resolve('OK') }, 2000);
-});
+//Axios com Async/Await
+import axios from 'axios';
 
-minhaPromise().then(response => {
-    console.log(response);
-});
-//executaPromise();
-//async/await
-/*async function executaPromise() {
-    //wait = .then()
-    const response = await minhaPromise();
-    console.log(response);
-};*/
-/*async function executaPromise() {
-    //wait = .then()
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
+class Api {
+    static async getUserInfo(username) {
+        try {
+            const response = await axios.get(`https://api.github.com/users/${username}`);
+            console.log(response);
+        } catch (err) {
+            console.warn('Erro na API');
+        }
+    }
+}
 
-    //se fosse usar essa sitaxe com o .then() faria desta maneira n vezes
-    /* minhaPromise().then(response = > {
-         console.log(response);
-     })*
-};*/
-
-//podemos usar o async/await tambem com arrow function
-const executaPromise = async() => {
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-};
-executaPromise();
+Api.getUserInfo('dnsdigitaltech');
+Api.getUserInfo('dnsdigitaltch');
